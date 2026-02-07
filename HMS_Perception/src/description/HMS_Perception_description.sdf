@@ -1,4 +1,5 @@
-<sdf version='1.11'>
+<?xml version="1.0" ?>
+<sdf version="1.11" xmlns:xacro="http://ros.org/wiki/xacro">
   <model name='rover'>
     <link name='base_link'>
       <inertial>
