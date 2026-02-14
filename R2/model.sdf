@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="r2">
+    <static>true</static>
+    <link name="base_link">
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://R2/meshes/r2.dae</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name= "WheelBL_visual">
+        <geometry>
+          <mesh>
+            <uri>model://R2/meshes/r2.dae</uri>
+            <submesh>
+              <name>WheelBL</name>
+              <center>false</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://R2/materials/textures/R2_Albedo.jpg</albedo_map>
+              <metal_map>model://R2/materials/textures/R2_Metalness.jpg</metal_map>
+              <roughness_map>model://R2/materials/textures/R2_Roughness.jpg</roughness_map>
+            </metal>
+          </pbr>
+          <!-- fallback to script if no PBR support-->
+          <script>
+            <uri>model://R2/materials/scripts/</uri>
+            <uri>model://R2/materials/textures/</uri>
+            <name>UrbanTile/R2_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name= "WheelFL_visual">
+        <geometry>
+          <mesh>
+            <uri>model://R2/meshes/r2.dae</uri>
+            <submesh>
+              <name>WheelFL</name>
+              <center>false</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://R2/materials/textures/R2_Albedo.jpg</albedo_map>
+              <metal_map>model://R2/materials/textures/R2_Metalness.jpg</metal_map>
+              <roughness_map>model://R2/materials/textures/R2_Roughness.jpg</roughness_map>
+            </metal>
+          </pbr>
+          <!-- fallback to script if no PBR support-->
+          <script>
+            <uri>model://R2/materials/scripts/</uri>
+            <uri>model://R2/materials/textures/</uri>
+            <name>UrbanTile/R2_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name= "WheelBR_visual">
+        <geometry>
+          <mesh>
+            <uri>model://R2/meshes/r2.dae</uri>
+            <submesh>
+              <name>WheelBR</name>
+              <center>false</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://R2/materials/textures/R2_Albedo.jpg</albedo_map>
+              <metal_map>model://R2/materials/textures/R2_Metalness.jpg</metal_map>
+              <roughness_map>model://R2/materials/textures/R2_Roughness.jpg</roughness_map>
+            </metal>
+          </pbr>
+          <!-- fallback to script if no PBR support-->
+          <script>
+            <uri>model://R2/materials/scripts/</uri>
+            <uri>model://R2/materials/textures/</uri>
+            <name>UrbanTile/R2_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name= "WheelFR_visual">
+        <geometry>
+          <mesh>
+            <uri>model://R2/meshes/r2.dae</uri>
+            <submesh>
+              <name>WheelFR</name>
+              <center>false</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://R2/materials/textures/R2_Albedo.jpg</albedo_map>
+              <metal_map>model://R2/materials/textures/R2_Metalness.jpg</metal_map>
+              <roughness_map>model://R2/materials/textures/R2_Roughness.jpg</roughness_map>
+            </metal>
+          </pbr>
+          <!-- fallback to script if no PBR support-->
+          <script>
+            <uri>model://R2/materials/scripts/</uri>
+            <uri>model://R2/materials/textures/</uri>
+            <name>UrbanTile/R2_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+      <visual name= "Body_visual">
+        <geometry>
+          <mesh>
+            <uri>model://R2/meshes/r2.dae</uri>
+            <submesh>
+              <name>Body</name>
+              <center>false</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://R2/materials/textures/R2_Albedo.jpg</albedo_map>
+              <metal_map>model://R2/materials/textures/R2_Metalness.jpg</metal_map>
+              <roughness_map>model://R2/materials/textures/R2_Roughness.jpg</roughness_map>
+            </metal>
+          </pbr>
+          <!-- fallback to script if no PBR support-->
+          <script>
+            <uri>model://R2/materials/scripts/</uri>
+            <uri>model://R2/materials/textures/</uri>
+            <name>UrbanTile/R2_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
