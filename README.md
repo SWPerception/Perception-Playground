@@ -47,3 +47,9 @@ ros2 pkg list | grep -E '^nav2_|^navigation2$'
 - `src/perception_playground/`: minimal ROS 2 package placeholder
 - `scripts/`: helper scripts for rosdep + colcon
 - `.devcontainer/`: devcontainer config (prebuilt image + VNC/noVNC)
+
+## Open model in gazebo sim
+```bash
+cd /workspace/HMS_Perception/worlds#
+gz sim rubicon.sdf
+```

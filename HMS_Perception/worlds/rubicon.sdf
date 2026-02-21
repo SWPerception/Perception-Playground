@@ -34,7 +34,7 @@
 
     <include>
       <name>R2</name>
-      <uri>https://fuel.gazebosim.org/1.0/juanzzoo/models/EXPLORER_R2_VISUALS_ONLY</uri>
+      <uri>../../R2</uri>
     </include>
 
   </world>
