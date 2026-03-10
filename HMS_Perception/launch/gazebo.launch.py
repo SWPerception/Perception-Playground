@@ -49,7 +49,7 @@ def generate_launch_description():
             'world': 'mars_world',
             'topic': '/robot_description',
             'entity_name': 'HMS_Perception',
-            'z': '0.65',
+            'z': '6.9',
         }.items(),
     )
 
