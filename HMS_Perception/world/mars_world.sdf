@@ -32,5 +32,7 @@
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Moon%20DEM</uri>
     </include>
 
+    <gravity>0 0 -3.73</gravity>
+
   </world>
 </sdf>
