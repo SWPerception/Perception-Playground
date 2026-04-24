@@ -56,10 +56,15 @@ gz sim rubicon.sdf
 
 ## to run moveit2
 ```bash
+cd arm_assembly
+sudo apt install ros-jazzy-moveit
 source install/setup.bash
 apt install -y wget
 wget http://snapshots.ros.org/jazzy/2025-05-23/ubuntu/pool/main/r/ros-jazzy-rviz-common/ros-jazzy-rviz-common_14.1.11-1noble.20250521.124129_arm64.deb
 sudo dpkg -i ros-jazzy-rviz-common_14.1.11-1noble.20250521.124129_arm64.deb
 apt -f install
+sudo apt-get update
+sudo apt install ros-jazzy-moveit
+colcon build
 ros2 launch moveit_setup_assistant setup_assistant.launch.py
 ```
