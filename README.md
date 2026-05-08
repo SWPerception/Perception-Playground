@@ -10,7 +10,7 @@ This repo ships with a VS Code devcontainer that uses a prebuilt Docker image (`
 3. Run: “Dev Containers: Reopen in Container”.
 4. Once the container finishes starting, open the GUI (choose one):
    - Browser (noVNC): `http://localhost:6080/vnc.html`
-   - macOS (recommended): install TigerVNC Viewer (https://tigervnc.org/), then connect to `localhost:5901` (no password)
+   - TigerVNC: install TigerVNC Viewer (https://tigervnc.org/), then connect to `localhost:5901` (no password)
 
 Note: the devcontainer uses `.devcontainer/.env` for optional environment overrides; it will be auto-created from `.devcontainer/.env.example` if missing.
 
