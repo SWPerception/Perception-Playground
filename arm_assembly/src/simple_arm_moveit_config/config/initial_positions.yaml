@@ -1,0 +1,6 @@
+# Default initial positions for simple_arm's ros2_control fake system
+
+initial_positions:
+  base_rotation: 0
+  truss_main_elbow: 0
+  truss_main_joint: 0

@@ -76,6 +76,7 @@ sudo dpkg -i ros-jazzy-rviz-common_14.1.11-1noble.20250520.201719_amd64.deb
 
 Continue with these commands after
 ``` bash
+source install/setup.bash
 apt -f install
 sudo apt-get update
 sudo apt install ros-jazzy-moveit
