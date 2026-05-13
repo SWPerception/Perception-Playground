@@ -83,3 +83,12 @@ sudo apt install ros-jazzy-moveit
 colcon build
 ros2 launch moveit_setup_assistant setup_assistant.launch.py
 ```
+
+
+Run the Demo
+``` bash
+cd arm_assembly
+source install/setup.bash
+ros2 launch simple_arm_moveit_config demo.launch.py
+
+```

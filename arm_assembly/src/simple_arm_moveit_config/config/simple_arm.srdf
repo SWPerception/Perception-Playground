@@ -15,24 +15,37 @@
         <joint name="truss_main_elbow"/>
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
-    <group_state name="start" group="arm">
-        <joint name="base_rotation" value="-0.781"/>
-        <joint name="truss_main_elbow" value="-1.7869"/>
-        <joint name="truss_main_joint" value="2.3073"/>
-    </group_state>
     <group_state name="straight" group="arm">
-        <joint name="base_rotation" value="1.8224"/>
-        <joint name="truss_main_elbow" value="0"/>
-        <joint name="truss_main_joint" value="0"/>
+        <joint name="base_rotation" value="-0.0868"/>
+        <joint name="truss_main_elbow" value="0.0173"/>
+        <joint name="truss_main_joint" value="1.5787"/>
     </group_state>
-    <group_state name="1" group="arm">
-        <joint name="base_rotation" value="-1.3364"/>
-        <joint name="truss_main_elbow" value="0"/>
-        <joint name="truss_main_joint" value="2.6196"/>
+    <group_state name="lowerL" group="arm">
+        <joint name="base_rotation" value="1.7183"/>
+        <joint name="truss_main_elbow" value="-2.1685"/>
+        <joint name="truss_main_joint" value="3.0099"/>
     </group_state>
-    <group_state name="2" group="arm">
-        <joint name="base_rotation" value="0"/>
-        <joint name="truss_main_elbow" value="2.7583"/>
-        <joint name="truss_main_joint" value="2.7757"/>
+    <group_state name="sss" group="arm">
+        <joint name="base_rotation" value="-2.3431"/>
+        <joint name="truss_main_elbow" value="-2.0644"/>
+        <joint name="truss_main_joint" value="2.1772"/>
     </group_state>
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="vitual" type="fixed" parent_frame="world" child_link="world"/>
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="base_plate_wall_left" link2="base_plate_wall_right" reason="Adjacent"/>
+    <disable_collisions link1="base_plate_wall_left" link2="left_elbow_truss" reason="Adjacent"/>
+    <disable_collisions link1="base_plate_wall_left" link2="right_elbow_truss" reason="Adjacent"/>
+    <disable_collisions link1="base_plate_wall_left" link2="truss_left" reason="Adjacent"/>
+    <disable_collisions link1="base_plate_wall_left" link2="truss_right" reason="Adjacent"/>
+    <disable_collisions link1="base_plate_wall_right" link2="left_elbow_truss" reason="Adjacent"/>
+    <disable_collisions link1="base_plate_wall_right" link2="right_elbow_truss" reason="Adjacent"/>
+    <disable_collisions link1="base_plate_wall_right" link2="truss_left" reason="Adjacent"/>
+    <disable_collisions link1="base_plate_wall_right" link2="truss_right" reason="Adjacent"/>
+    <disable_collisions link1="left_elbow_truss" link2="right_elbow_truss" reason="Adjacent"/>
+    <disable_collisions link1="left_elbow_truss" link2="truss_left" reason="Adjacent"/>
+    <disable_collisions link1="left_elbow_truss" link2="truss_right" reason="Adjacent"/>
+    <disable_collisions link1="right_elbow_truss" link2="truss_left" reason="Adjacent"/>
+    <disable_collisions link1="right_elbow_truss" link2="truss_right" reason="Adjacent"/>
+    <disable_collisions link1="truss_left" link2="truss_right" reason="Adjacent"/>
 </robot>

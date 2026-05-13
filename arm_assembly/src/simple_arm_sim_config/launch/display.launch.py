@@ -7,8 +7,8 @@ from launch_ros.substitutions import FindPackageShare
 import os
 
 def generate_launch_description():
-    pkg_share = FindPackageShare(package='arm_assembly').find('arm_assembly')
-    default_model_path = os.path.join(pkg_share, 'src', 'description', 'arm_assembly.urdf')
+    pkg_share = FindPackageShare(package='simple_arm_sim_config').find('simple_arm_sim_config')
+    default_model_path = os.path.join(pkg_share, 'description', 'arm_assembly.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz', 'config.rviz')
 
     robot_state_publisher_node = Node(

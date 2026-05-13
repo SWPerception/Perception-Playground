@@ -1,13 +1,13 @@
 moveit_setup_assistant_config:
   urdf:
-    package: arm_assembly
-    relative_path: src/description/arm_assembly.urdf
+    package: simple_arm_sim_config
+    relative_path: description/arm_assembly.urdf
   srdf:
     relative_path: config/simple_arm.srdf
   package_settings:
-    author_name: devious
-    author_email: Devious@yahoo.com
-    generated_timestamp: 1778214479
+    author_name: ewrw
+    author_email: gimmy@yahoo.com
+    generated_timestamp: 1778308433
   control_xacro:
     command:
       - position
