@@ -1,8 +1,10 @@
 # Perception-Playground
 
 This repo is set up as a ROS 2 `colcon` workspace (packages live in `src/`).
+- **roverarm** - Rover arm assembly setup with [ROS Jazzy](https://docs.ros.org/en/jazzy/index.html) and [MoveIt](https://moveit.ai/). 
+- **sam_bot_tutorial** - Completed tutorial branch following the sam_bot ROS 2 navigation example (see below).
 
-## Quick start (recommended: VS Code devcontainer)
+## Tutorial Quick start (recommended: VS Code devcontainer)
 This repo ships with a VS Code devcontainer that uses a prebuilt Docker image (`lichunho00/perception_playground`) with **ROS 2 Jazzy + Nav2** already installed. A lightweight desktop is exposed locally via VNC/noVNC so you can run GUI tools (RViz/Gazebo) without host-side ROS setup.
 
 1. Install Docker Desktop + VS Code + the “Dev Containers” extension.
