@@ -55,6 +55,12 @@ gz sim rubicon.sdf
 ```
 
 ## to run moveit2
+
+Use the following command at root level of project (don't cd arm assembly)
+```
+chmod +x setup_arm.sh ./setup_arm.sh
+```
+
 ```bash
 cd arm_assembly
 sudo apt install ros-jazzy-moveit
