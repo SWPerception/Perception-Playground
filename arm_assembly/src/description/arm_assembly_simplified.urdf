@@ -94,52 +94,67 @@
   <limit lower="-3.14159" upper="3.14159" effort="50" velocity="2"/>
 </joint>
   <!-- ================= UPPER ARM ================= -->
+<link name="truss_right">
+    <inertial>
+        <mass value="0.355071" />
+        <origin xyz="-0.112971 -9.64101e-08 0.003996" rpy="0 -0 0" />
+        <inertia ixx="0.00032557" ixy="5.69405e-09" ixz="-4.80543e-08" iyy="0.00307457" iyz="1.36979e-13" izz="0.00339635" />
+     </inertial>
+     <visual>
+        <origin xyz="-0.23 -6.4294e-19 -0.008" rpy="0 -0 0" />
+        <geometry>
+            <mesh filename="package://arm_assembly/meshes/Truss Right.stl" scale="1 1 1" />
+        </geometry>
+        <material name="0.639216_0.654902_0.662745_0.000000_0.000000">
+            <texture />
+            <color rgba="0.639216 0.654902 0.662745 1" />
+        </material>
+    </visual>
+  <collision>
+    <origin xyz="-0.23 0 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arm_assembly/meshes/Truss Right.stl" scale="1 1 1" />
+    </geometry>
+  </collision>
+</link>
+
+
 <link name="truss_left">
-
-  <visual>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertial>
+        <mass value="0.379638" />
+        <origin xyz="-0.11448 -5.18783e-18 0.00400374" rpy="0 -0 0" />
+        <inertia ixx="0.000330711" ixy="0" ixz="4.59102e-08" iyy="0.00312125" iyz="0" izz="0.00344792" />
+    </inertial>
+    <visual>
+        <origin xyz="-0.23 -6.4294e-19 0" rpy="0 -0 0" />
+        <geometry>
+           <mesh filename="package://arm_assembly/meshes/Truss Left.stl" scale="1 1 1" />
+        </geometry>
+        <material name="0.639216_0.654902_0.662745_0.000000_0.000000">
+             <texture />
+             <color rgba="0.639216 0.654902 0.662745 1" />
+        </material>
+    </visual>
+  <collision>
+    <origin xyz="-0.23 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://arm_assembly/meshes/Truss Left.stl"/>
+      <mesh filename="package://arm_assembly/meshes/Truss Left.stl" scale="1 1 1" />
     </geometry>
-  </visual>
-
-  <inertial>
-    <origin xyz="0 0 0"/>
-    <mass value="0.355071"/>
-    <inertia ixx="0.0003" iyy="0.0030" izz="0.0033"/>
-  </inertial>
-
+  </collision>
 </link>
-
-  <link name="truss_right">
-
-  <visual>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://arm_assembly/meshes/Truss Right.stl"/>
-    </geometry>
-  </visual>
-
-  <inertial>
-    <origin xyz="0 0 0"/>
-    <mass value="0.379638"/>
-    <inertia ixx="0.00033" iyy="0.00312" izz="0.00344"/>
-  </inertial>
-</link>
-
 <link name="truss_group"/>
 
   
 <joint name="left_truss_joint" type="fixed">
   <parent link="truss_group"/>
   <child link="truss_left"/>
-  <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+  <origin xyz="0.23 0 -0.07" rpy="0 0 0"/>
 </joint>
 
 <joint name="right_truss_joint" type="fixed">
   <parent link="truss_group"/>
   <child link="truss_right"/>
-  <origin xyz="0 0 0.085" rpy="0 0 0"/>
+  <origin xyz="0.23 0 0.07" rpy="0 0 0"/>
 </joint>
 
   <!-- ================= SINGLE CONTROLLING JOINT ================= -->
@@ -173,6 +188,12 @@
                 <color rgba="0.647059 0.647059 0.647059 1" />
             </material>
         </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+         <geometry>
+           <mesh filename="package://arm_assembly/meshes/Left Elbow Truss.stl" scale="1 1 1" />
+         </geometry>
+      </collision>
     </link>
 
    <link name="right_elbow_truss">
@@ -191,6 +212,12 @@
                 <color rgba="0.647059 0.647059 0.647059 1" />
             </material>
         </visual>
+      <collision>
+          <origin xyz="-0.006 -0.127 -0.005" rpy="0 0 0"/>
+         <geometry>
+           <mesh filename="package://arm_assembly/meshes/Right Elbow Truss.stl" scale="1 1 1" />
+         </geometry>
+      </collision>
     </link>
   
 <link name="Elbowgroup"/>
@@ -199,13 +226,13 @@
 <joint name="left_elbow" type="fixed">
   <parent link="Elbowgroup"/>
   <child link="left_elbow_truss"/>
-  <origin xyz="0.15 0.045 0" rpy="3.14159 0 1.5708 "/>
+  <origin xyz="0.15 0.025 0" rpy="3.14159 0 1.5708 "/>
 </joint>
 
 <joint name="right_elbow" type="fixed">
   <parent link="Elbowgroup"/>
   <child link="right_elbow_truss"/>
-  <origin xyz="0.285 -0.11 -0.01" rpy="3.14159 0 1.5708 "/>
+  <origin xyz="0.285 -0.078 -0.01" rpy="3.14159 0 1.5708 "/>
 </joint>
 
   <!-- ================= SINGLE CONTROLLING JOINT ================= -->
@@ -224,5 +251,4 @@
 
   <!-- ================= JOINTS ================= -->
 
-  \
 </robot>
