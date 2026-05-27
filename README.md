@@ -59,37 +59,8 @@ gz sim rubicon.sdf
 Use the following command at root level of project (don't cd arm assembly)
 ```
 chmod +x setup_arm.sh ./setup_arm.sh
+./setup_arm.sh
 ```
-
-```bash
-cd arm_assembly
-sudo apt install ros-jazzy-moveit
-source install/setup.bash
-apt install -y wget
-```
-
-If you are on an ARM chip - use 
-```bash
-wget http://snapshots.ros.org/jazzy/2025-05-23/ubuntu/pool/main/r/ros-jazzy-rviz-common/ros-jazzy-rviz-common_14.1.11-1noble.20250521.124129_arm64.deb
-sudo dpkg -i ros-jazzy-rviz-common_14.1.11-1noble.20250521.124129_arm64.deb
-```
-
-Else, if you are on an AMD chip - use
-```bash
-wget http://snapshots.ros.org/jazzy/2025-05-23/ubuntu/pool/main/r/ros-jazzy-rviz-common/ros-jazzy-rviz-common_14.1.11-1noble.20250520.201719_amd64.deb
-sudo dpkg -i ros-jazzy-rviz-common_14.1.11-1noble.20250520.201719_amd64.deb 
-```
-
-Continue with these commands after
-``` bash
-source install/setup.bash
-apt -f install
-sudo apt-get update
-sudo apt install ros-jazzy-moveit
-colcon build
-ros2 launch moveit_setup_assistant setup_assistant.launch.py
-```
-
 
 Run the Demo
 ``` bash
