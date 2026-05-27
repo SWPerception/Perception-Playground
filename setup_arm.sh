@@ -20,6 +20,9 @@ echo ""
 # Move into the arm_assembly directory
 cd arm_assembly
 
+# Update package lists
+sudo apt update
+
 #Install "install" using apt
 sudo apt -f install -y
 
@@ -29,19 +32,14 @@ sudo apt install -y ros-jazzy-moveit
 # Source ROS install
 source install/setup.bash
 
-# Install wget
-sudo apt install -y wget
-
 # Detect architecture and download the appropriate rviz-common package
 ARCH=$(uname -m)
 
 if [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
     echo "Detected ARM architecture"
-    wget http://snapshots.ros.org/jazzy/2025-05-23/ubuntu/pool/main/r/ros-jazzy-rviz-common/ros-jazzy-rviz-common_14.1.11-1noble.20250521.124129_arm64.deb
     sudo dpkg -i ros-jazzy-rviz-common_14.1.11-1noble.20250521.124129_arm64.deb
 elif [ "$ARCH" = "x86_64" ]; then
     echo "Detected AMD/x86_64 architecture"
-    wget http://snapshots.ros.org/jazzy/2025-05-23/ubuntu/pool/main/r/ros-jazzy-rviz-common/ros-jazzy-rviz-common_14.1.11-1noble.20250520.201719_amd64.deb
     sudo dpkg -i ros-jazzy-rviz-common_14.1.11-1noble.20250520.201719_amd64.deb
 else
     echo "Unknown architecture: $ARCH. Please install rviz-common manually."
